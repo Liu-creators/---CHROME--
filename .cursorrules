@@ -1,0 +1,30 @@
+{
+    "javascript": {
+        "functionNaming": "PascalCase",
+        "variableNaming": "camelCase",
+        "indentation": "spaces",
+        "spacesPerIndent": 2
+    },
+    "typescript": {
+        "functionNaming": "PascalCase",
+        "variableNaming": "camelCase",
+        "indentation": "spaces",
+        "spacesPerIndent": 2
+    },
+    "html": {
+        "indentation": "spaces",
+        "spacesPerIndent": 2
+    },
+    "css": {
+        "indentation": "spaces",
+        "spacesPerIndent": 2
+    },
+    "conversationLog": {
+        "format": {
+            "topic": "required",
+            "purpose": "required",
+            "coreDecisions": "required",
+            "modifiedFiles": "required"
+        }
+    }
+}

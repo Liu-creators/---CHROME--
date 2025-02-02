@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Kimi智能助手",
+  "version": "1.0",
+  "description": "基于Kimi API的智能翻译和总结工具",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "sidePanel",
+    "tabs",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Kimi智能助手"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["js/*", "styles/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+} 
