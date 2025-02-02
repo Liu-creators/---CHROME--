@@ -49,19 +49,34 @@
       <div id="summaryPanel" class="panel">
         <div class="content-area">
           <h3>页面内容总结：</h3>
-          <div id="summaryResult" class="text-box"></div>
-          <div class="button-group">
-            <button id="summarizeButton" class="action-button">生成总结</button>
-            <button id="copySummaryButton" class="icon-button">📋</button>
-            <button id="shareSummaryButton" class="icon-button">💬</button>
-          </div>
           <div class="summary-controls">
-            <label>总结长度：</label>
-            <select id="summaryLength">
+            <label>总结内容长度：</label>
+            <select id="summaryContentLength">
               <option value="short">简短</option>
               <option value="medium" selected>中等</option>
               <option value="long">详细</option>
             </select>
+          </div>
+          <div id="summaryResult" class="text-box"></div>
+          <div class="button-group">
+            <button id="summarizeContentButton" class="action-button">总结内容</button>
+            <button id="copySummaryButton" class="icon-button">📋</button>
+          </div>
+
+          <h3>内容结构提炼：</h3>
+          <div class="summary-controls">
+            <label>结构层级：</label>
+            <select id="summaryLevel">
+              <option value="short">简短（核心信息+亮点）</option>
+              <option value="medium" selected>中等（核心信息+亮点+数据+相关）</option>
+              <option value="long">详细（全部内容）</option>
+            </select>
+          </div>
+          <div id="structureResult" class="text-box"></div>
+          <div class="button-group">
+            <button id="extractStructureButton" class="action-button">提炼结构</button>
+            <button id="copyStructureButton" class="icon-button">📋</button>
+            <button id="shareStructureButton" class="icon-button">💬</button>
           </div>
         </div>
       </div>

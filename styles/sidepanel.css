@@ -115,14 +115,17 @@ main {
 }
 
 .text-box {
-  width: 100%;
-  min-height: 100px;
-  border: 1px solid var(--border-color);
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 12px;
-  margin: 8px 0 16px;
-  background-color: var(--bg-color);
-  transition: border-color 0.3s ease;
+  padding: 16px;
+  margin: 8px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .text-box:focus-within {
@@ -281,4 +284,192 @@ select:focus {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* 结构化总结样式 */
+#summaryResult {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+#summaryResult h1 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: var(--primary-color);
+}
+
+#summaryResult section {
+  margin-bottom: 1.5em;
+}
+
+/* emoji标题样式 */
+#summaryResult section > div:first-child {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+/* 缩进样式 */
+#summaryResult ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+#summaryResult ul ul {
+  padding-left: 2em;
+}
+
+/* 项目符号样式 */
+#summaryResult li::before {
+  content: "•";
+  color: var(--primary-color);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* 数字编号样式 */
+#summaryResult ol {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+/* 强调文本样式 */
+#summaryResult strong {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* 相关信息样式 */
+#summaryResult .related-info {
+  background-color: var(--hover-color);
+  padding: 1em;
+  border-radius: 8px;
+  margin-top: 1em;
+}
+
+/* 总结控件样式 */
+.summary-controls {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summary-controls label {
+  font-size: 14px;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.summary-controls select {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.summary-controls select:hover {
+  border-color: var(--primary-light);
+}
+
+.summary-controls select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.1);
+}
+
+.summary-controls option {
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* 结构化内容样式 */
+.content-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 16px 0 8px 0;
+  padding: 4px 0;
+}
+
+.content-level-1 {
+  margin: 8px 0 4px 0;
+  padding-left: 16px;
+}
+
+.content-level-2 {
+  margin: 4px 0;
+  padding-left: 32px;
+}
+
+.content-level-3 {
+  margin: 4px 0;
+  padding-left: 48px;
+}
+
+.content-indent-1 {
+  margin: 2px 0;
+  padding-left: 32px;
+  color: #666;
+}
+
+.content-indent-2 {
+  margin: 2px 0;
+  padding-left: 48px;
+  color: #666;
+}
+
+.content-indent-3 {
+  margin: 2px 0;
+  padding-left: 64px;
+  color: #666;
+}
+
+.content-text {
+  margin: 8px 0;
+}
+
+/* 总结内容样式 */
+.summary-numbered-item {
+  margin: 8px 0;
+  padding-left: 2em;
+  text-indent: -2em;
+  line-height: 1.6;
+}
+
+.summary-paragraph-title {
+  margin: 16px 0 8px 0;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.summary-paragraph-content {
+  margin: 8px 0;
+  line-height: 1.6;
+  text-indent: 2em;
+  color: var(--text-color);
+}
+
+/* 调整段落间距 */
+.text-box > div:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+/* 编号列表样式 */
+.text-box .summary-numbered-item {
+  position: relative;
+  padding-left: 2.5em;
+}
+
+.text-box .summary-numbered-item::before {
+  position: absolute;
+  left: 1em;
+  color: var(--primary-color);
 } 
